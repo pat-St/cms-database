@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    build: .
+    volumes:
+      - container-volume:/var/lib/mysql
+      - ./database_content/schema-with-example.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - "3306:3306"
+volumes:
+  container-volume:

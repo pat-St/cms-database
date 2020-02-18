@@ -1,3 +1,3 @@
 FROM mariadb:latest
-ENV MYSQL_DATABASE=wp_ferienwvk_db0
+ENV MYSQL_DATABASE=ferienwvk_db0
 ENV MYSQL_ROOT_PASSWORD=pass
