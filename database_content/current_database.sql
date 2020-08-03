@@ -16,9 +16,9 @@ CREATE TABLE `Tile` (
   `ID` int(11) NOT NULL,
   `titleName` varchar(30) NOT NULL,
   `description` text NULL,
-  `kachelType` int(11) NOT NULL,
-  `modalType` int(11) NOT NULL,
-  `kachelSize` int(11) NOT NULL,
+  `kachelType` int(2) NOT NULL Default 0,
+  `modalType` int(2) NOT NULL Default 0,
+  `tileSizeType` int(2) NOT NULL Default 0,
   PRIMARY KEY (ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 

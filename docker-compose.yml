@@ -1,11 +1,15 @@
-version: '3'
+version: '3.8'
 services:
   db:
-    build: .
+    image: mariadb:latest
     volumes:
       - container-volume:/var/lib/mysql
-      - ./database_content/schema-with-example.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./database_content/current_database.sql:/docker-entrypoint-initdb.d/a1_schema.sql
+      - ./database_content/user_content.sql:/docker-entrypoint-initdb.d/a2_user.sql
     ports:
       - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=ferienwvk_db1
+      - MYSQL_ROOT_PASSWORD=pass
 volumes:
   container-volume:
