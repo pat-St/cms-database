@@ -116,7 +116,7 @@ CREATE TABLE `Image` (
 DROP TABLE IF EXISTS `TileOrder`;
 CREATE TABLE `TileOrder` (
   `ID` int(11) NOT NULL,
-  `ORDERNR`  int(3) NOT NULL,
+  `seqNum`  int(11) NOT NULL,
   `fk_tile` int(11) NOT NULL,
   PRIMARY KEY (ID),
   CONSTRAINT `TileOrder_ibfk_1` FOREIGN KEY (`fk_tile`) 
