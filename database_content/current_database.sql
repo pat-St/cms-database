@@ -125,7 +125,7 @@ CREATE TABLE `TileOrder` (
 
 DROP TABLE IF EXISTS `WUser`;
 CREATE TABLE `WUser` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `pw` text NOT NULL,
   `salt` text NOT NULL,
